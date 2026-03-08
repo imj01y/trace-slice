@@ -1,0 +1,5 @@
+[00:00:00 001][lib.so 0x100] [d2800108] 0x40000100: "mov x8, #5" => x8=0x5
+[00:00:00 001][lib.so 0x104] [d2800149] 0x40000104: "mov x9, #10" => x9=0xa
+[00:00:00 001][lib.so 0x108] [8b090108] 0x40000108: "add x8, x8, x9" x8=0x5 x9=0xa => x8=0xf
+[00:00:00 001][lib.so 0x10c] [f9000be8] 0x4000010c: "str x8, [sp, #0x10]" ; mem[WRITE] abs=0xbffff010 x8=0xf sp=0xbffff000 => x8=0xf
+[00:00:00 001][lib.so 0x110] [f9400be0] 0x40000110: "ldr x0, [sp, #0x10]" ; mem[READ] abs=0xbffff010 sp=0xbffff000 => x0=0xf

@@ -1,0 +1,27 @@
+[workspace]
+
+[package]
+name = "trace-slice"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+smallvec = { version = "1", features = ["union"] }
+bitvec = "1"
+rustc-hash = "2"
+anyhow = "1"
+memchr = "2"
+memmap2 = "0.9"
+
+[[bin]]
+name = "trace-slice"
+path = "src/main.rs"
+
+[lib]
+name = "trace_slice"
+path = "src/lib.rs"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

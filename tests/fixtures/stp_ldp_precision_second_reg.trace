@@ -1,0 +1,4 @@
+[00:00:00 001][lib.so 0x100] [d2815545] 0x40000100: "mov x5, #0xaaaa" => x5=0xaaaa
+[00:00:00 001][lib.so 0x104] [d2817766] 0x40000104: "mov x6, #0xbbbb" => x6=0xbbbb
+[00:00:00 001][lib.so 0x108] [a9000be5] 0x40000108: "stp x5, x6, [sp]" ; mem[WRITE] abs=0xbffff000 x5=0xaaaa x6=0xbbbb sp=0xbffff000 => x5=0xaaaa x6=0xbbbb
+[00:00:00 001][lib.so 0x10c] [a9402009] 0x4000010c: "ldp x9, x8, [sp]" ; mem[READ] abs=0xbffff000 x9=0xaaaa x8=0xbbbb sp=0xbffff000 => x9=0xaaaa x8=0xbbbb
